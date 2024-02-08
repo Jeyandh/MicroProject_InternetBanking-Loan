@@ -22,7 +22,6 @@ public class Loans {
 
 	public Loans() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Loans(long loanId, String loanType, long loanAmount, long loanEmi, long userId) {
