@@ -18,28 +18,28 @@ public class LoanControlller {
 	Loans loan;
 	
 	@PostMapping("/adduser")
-	public void AddLoan(@RequestBody Loans loan) {
+	public void addLoan(@RequestBody Loans loan) {
 		service.addLoan(loan);
 	}
 	
 	@PutMapping("/edituser")
-	public void EditUser(@RequestBody Loans loan) {
+	public void editUser(@RequestBody Loans loan) {
 		service.editLoan(loan);
 	}
 	
 	@DeleteMapping("/deleteuser/{userId}")
-	public void DeleteLoan(@PathVariable("loanId") long loanId) {
+	public void deleteLoan(@PathVariable("loanId") long loanId) {
 		service.deleteLoan(loanId);
 	}
 
 	
 	@GetMapping("/viewAll")
-	public void ViewAllDetails() {
+	public void viewAllDetails() {
 		service.viewAllLoan();
 	}
 	
 	@GetMapping("view/{userId}")
-	public void ViewDetail(@PathVariable("loanId") long loanId) {
+	public void viewDetail(@PathVariable("loanId") long loanId) {
 		service.viewDetail(loanId);
 	}
 }
