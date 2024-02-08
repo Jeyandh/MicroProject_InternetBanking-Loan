@@ -1,0 +1,142 @@
+<body>
+    <div matDialogTitle>
+        <h1 style="color:blue">Add Loans</h1> 
+    </div>
+    
+    <form [formGroup]= "loanForm" id="loanForm" (ngSubmit) = "onSubmit()">
+        <div class="content">
+            <mat-dialog-content >
+                <div class="row">
+    
+                    <!-- loan Id -->
+                    <mat-form-field appearance="outline">
+                        <mat-label>Loan Id</mat-label>
+                        <input type="number" matInput  formControlName = "loanId" name="userId">
+                            <div *ngIf ="loanForm.get('loanId')!.touched && loanForm.get('loanId')!.invalid">
+                                <div *ngIf ="loanForm.get('loanId')!.hasError('required')">
+                                    <font color="red">*id required</font>
+                                </div>
+                                
+                            </div>
+                    </mat-form-field>
+    
+                    <!-- loan type -->
+                    <mat-form-field appearance="outline">
+                        <mat-label>Loan Type</mat-label>
+                        <input type="text" matInput  formControlName = "loanType" name="loanType">
+                            <div *ngIf ="loanForm.get('loanType')!.touched && loanForm.get('loanType')!.invalid">
+                                <div *ngIf ="loanForm.get('loanType')!.hasError('required')">
+                                    <font color="red">*loan type required</font>
+                                </div>
+                                <div *ngIf ="loanForm.get('loanType')!.hasError('pattern')">
+                                    <font color="red">*invalid format</font>
+                                </div>
+                            </div>
+                    </mat-form-field>
+                    </div>
+    
+                    <div class="row">
+    
+                        <!-- Loan Amount -->
+                        <mat-form-field appearance="outline">
+                            <mat-label>Loan Amount</mat-label>
+                            <input type="number" matInput  formControlName = "loanAmount" name="loanAmount">
+                                <div *ngIf ="loanForm.get('loanAmount')!.touched && loanForm.get('loanAmount')!.invalid">
+                                    <div *ngIf ="loanForm.get('loanAmount')!.hasError('required')">
+                                        <font color="red">*loanAmount required</font>
+                                    </div>
+                                    <div *ngIf ="loanForm.get('loanAmount')!.hasError('pattern')">
+                                        <font color="red">*invalid format</font>
+                                    </div>
+                                </div>
+                        </mat-form-field>
+        
+                        <!-- Loan Emi -->
+                        <mat-form-field appearance="outline">
+                            <mat-label>Loan EMI</mat-label>
+                            <input type="number" matInput  formControlName = "loanEmi" name="loanEmi">
+                                <div *ngIf ="loanForm.get('loanEmi')!.touched && loanForm.get('loanEmi')!.invalid">
+                                    <div *ngIf ="loanForm.get('loanEmi')!.hasError('required')">
+                                        <font color="red">*loanEmi required</font>
+                                    </div>
+                                    <div *ngIf ="loanForm.get('loanEmi')!.hasError('pattern')">
+                                        <font color="red">*invalid format</font>
+                                    </div>
+                                </div>
+                        </mat-form-field>
+                        </div>
+                        
+                        <div class="row">
+    
+                            <!-- Loan Intrest -->
+                            <mat-form-field appearance="outline">
+                                <mat-label>Loan Intrest</mat-label>
+                                <input type="number" matInput  formControlName = "loanIntrest" name="loanIntrest">
+                                    <div *ngIf ="loanForm.get('loanIntrest')!.touched && loanForm.get('loanIntrest')!.invalid">
+                                        <div *ngIf ="loanForm.get('loanIntrest')!.hasError('required')">
+                                            <font color="red">*loanIntrest required</font>
+                                        </div>
+                                        <div *ngIf ="loanForm.get('loanIntrest')!.hasError('pattern')">
+                                            <font color="red">*invalid format</font>
+                                        </div>
+                                    </div>
+                            </mat-form-field>
+
+                            <!-- User Name -->
+                            <mat-form-field appearance="outline">
+                                <mat-label>User Name</mat-label>
+                                <input type="text" matInput  formControlName = "userName" name="userName">
+                                    <div *ngIf ="loanForm.get('userName')!.touched && loanForm.get('userName')!.invalid">
+                                        <div *ngIf ="loanForm.get('userName')!.hasError('required')">
+                                            <font color="red">*userName required</font>
+                                        </div>
+                                        <div *ngIf ="loanForm.get('userName')!.hasError('pattern')">
+                                            <font color="red">*userName format</font>
+                                        </div>
+                                    </div>
+                            </mat-form-field>
+                            </div>
+                            <div class="row">
+                                <!-- User Account Number -->
+                            <mat-form-field appearance="outline">
+                                <mat-label>User Account Number</mat-label>
+                                <input type="text" matInput  formControlName = "userAccNo" name="userAccNo">
+                                    <div *ngIf ="loanForm.get('userAccNo')!.touched && loanForm.get('userAccNo')!.invalid">
+                                        <div *ngIf ="loanForm.get('userAccNo')!.hasError('required')">
+                                            <font color="red">*userAccNo required</font>
+                                        </div>
+                                        <div *ngIf ="loanForm.get('userName')!.hasError('pattern')">
+                                            <font color="red">*userAccNo format</font>
+                                        </div>
+                                    </div>
+                            </mat-form-field>
+                                <!-- User Id -->
+                                <mat-form-field appearance="outline">
+                                    <mat-label>User Id</mat-label>
+                                    <input type="number" matInput  formControlName = "userId" name="userId">
+                                        <div *ngIf ="loanForm.get('userId')!.touched && loanForm.get('userId')!.invalid">
+                                            <div *ngIf ="loanForm.get('userId')!.hasError('required')">
+                                                <font color="red">*userId id required</font>
+                                            </div>
+                                            <div *ngIf ="loanForm.get('loanIntrest')!.hasError('pattern')">
+                                                <font color="red">*invalid format</font>
+                                            </div>
+                                        </div>
+                                </mat-form-field>
+                                </div>
+            </mat-dialog-content>
+        </div>
+        
+        <div class="action">
+            <mat-dialog-actions style="justify-content: end;">
+                <!-- Cancel -->
+                <button mat-raised-button type="button" [matDialogClose] = "false">Cancel</button>
+    
+                <!-- Submit -->
+                <button mat-raised-button type="submit" value="submit" color="primary">{{data ? 'Update': 'Save'}} </button>
+            </mat-dialog-actions>
+        </div>
+    </form>
+</body>
+
+

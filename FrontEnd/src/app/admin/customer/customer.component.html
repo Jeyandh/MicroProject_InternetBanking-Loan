@@ -1,0 +1,113 @@
+<body>
+    <div matDialogTitle>
+        <h1 style="color:blue">Update Customer</h1> 
+    </div>
+    
+    <form [formGroup]= "customerForm" id="customerForm" (ngSubmit) = "onSubmit()">
+        <div class="content">
+            <mat-dialog-content >
+                <div class="row">
+           <!-- Customer Id -->
+                    <mat-form-field appearance="outline">
+                        <mat-label>Customer Id</mat-label>
+                        <input type="number" matInput placeholder="Eg..1" formControlName = "userId" name="userId">
+                            <div *ngIf ="customerForm.get('userId')!.touched && customerForm.get('userId')!.invalid">
+                                <div *ngIf ="customerForm.get('userId')!.hasError('required')">
+                                    <font color="red">*id required</font>
+                                </div>
+                                
+                            </div>
+                    </mat-form-field>
+    
+                    <!-- Customer Name -->
+                    <mat-form-field appearance="outline">
+                        <mat-label>Customer Name</mat-label>
+                        <input type="text" matInput placeholder="Eg..Jeyandhan" formControlName = "userName" name="userName">
+                            <div *ngIf ="customerForm.get('userName')!.touched && customerForm.get('userName')!.invalid">
+                                <div *ngIf ="customerForm.get('userName')!.hasError('required')">
+                                    <font color="red">*Customer Name required</font>
+                                </div>
+                                <div *ngIf ="customerForm.get('userName')!.hasError('pattern')">
+                                    <font color="red">*invalid format</font>
+                                </div>
+                            </div>
+                    </mat-form-field>
+                    </div>
+    
+                    <div class="row">
+    
+                        <!-- customer email -->
+                        <mat-form-field appearance="outline">
+                            <mat-label>Email Id</mat-label>
+                            <input type="email" matInput placeholder="Eg..naga@gmail.com" formControlName = "userEmail" name="userEmail">
+                                <div *ngIf ="customerForm.get('userEmail')!.touched && customerForm.get('userEmail')!.invalid">
+                                    <div *ngIf ="customerForm.get('userEmail')!.hasError('required')">
+                                        <font color="red">*email id required</font>
+                                    </div>
+                                    <div *ngIf ="customerForm.get('userEmail')!.hasError('pattern')">
+                                        <font color="red">*invalid format</font>
+                                    </div>
+                                </div>
+                        </mat-form-field>
+        
+                        <!-- password -->
+                        <mat-form-field appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input type="password" matInput  formControlName = "password" name="password">
+                                <div *ngIf ="customerForm.get('password')!.touched && customerForm.get('password')!.invalid">
+                                    <div *ngIf ="customerForm.get('password')!.hasError('required')">
+                                        <font color="red">*password required</font>
+                                    </div>
+                                    <div *ngIf ="customerForm.get('password')!.hasError('pattern')">
+                                        <font color="red">*invalid format</font>
+                                    </div>
+                                </div>
+                        </mat-form-field>
+                        </div>
+    
+                        <div class="row">
+    
+                            <!-- customer contact -->
+                            <mat-form-field appearance="outline">
+                                <mat-label>Contact</mat-label>
+                                <input type="phone" matInput placeholder="Eg.6382216615" formControlName = "userContact" name="userContact">
+                                    <div *ngIf ="customerForm.get('userContact')!.touched && customerForm.get('userContact')!.invalid">
+                                        <div *ngIf ="customerForm.get('userContact')!.hasError('required')">
+                                            <font color="red">*contact required</font>
+                                        </div>
+                                        <div *ngIf ="customerForm.get('userContact')!.hasError('pattern')">
+                                            <font color="red">*invalid format</font>
+                                        </div>
+                                    </div>
+                            </mat-form-field>
+            
+                          <!-- customer acc -->
+                            <mat-form-field appearance="outline">
+                                <mat-label>Account Number</mat-label>
+                                <input type="text" matInput  formControlName = "userAccNo" name="userAccNo">
+                                    <div *ngIf ="customerForm.get('userAccNo')!.touched && customerForm.get('userAccNo')!.invalid">
+                                        <div *ngIf ="customerForm.get('userAccNo')!.hasError('required')">
+                                            <font color="red">*AccNo required</font>
+                                        </div>
+                                        <div *ngIf ="customerForm.get('userAccNo')!.hasError('pattern')">
+                                            <font color="red">*invalid format</font>
+                                        </div>
+                                    </div>
+                            </mat-form-field>
+                        </div>
+            </mat-dialog-content>
+        </div>
+        
+        <div class="action">
+            <mat-dialog-actions style="justify-content: end;">
+                <!-- Cancel -->
+                <button mat-raised-button type="button" [matDialogClose] = "false">Cancel</button>
+    
+                <!-- Submit -->
+                <button mat-raised-button type="submit" value="submit" color="primary">{{data ? 'Update': 'Save'}} </button>
+            </mat-dialog-actions>
+        </div>
+    </form>
+</body>
+
+

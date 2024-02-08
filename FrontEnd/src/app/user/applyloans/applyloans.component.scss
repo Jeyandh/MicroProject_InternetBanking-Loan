@@ -1,0 +1,38 @@
+
+#navbar .nav {
+    background-color: #000000;
+    font-size: 50px;
+    color: white;
+    line-height: 80px;
+    text-align: center;
+    justify-content: end;
+    font-weight: bold;
+  
+  }
+  
+  
+  
+  #navbar .nav a{
+    background: none;
+    color: rgb(247, 247, 247);
+    font-size: 14px;
+    padding: 16px 24px;
+  }
+  
+  #navbar .nav a:hover{
+    background: none;
+    width: 100px;
+    background-color: rgb(251, 251, 251);
+    border-color: rgb(253, 253, 253);
+    color: black;
+    border-radius: 10px;
+  }
+  
+  .space {
+      flex: 1 1 auto;
+  }
+  body{
+    background-image: url('https://www.kvgbank.com/images/products/karnataka-vikas-grameena-bank.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

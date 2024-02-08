@@ -1,0 +1,59 @@
+<body>
+    <section class=" gradient-custom">
+        <div class="container py-5  h-100">
+            <div class="row d-flex justify-content-center align-items-center ">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+                            <h2 class="fw-bold mb-5 text-uppercase">Register</h2>
+                            <form [formGroup]="registerForm" (ngSubmit)="register()">
+    
+                                <div class="form-outline form-white mb-4">
+                                    <input type="text" formControlName="userId" placeholder="Enter User Id"
+                                        class="form-control form-control-lg" />
+                                </div>
+                                <div class="form-outline form-white mb-4">
+                                    <input type="text" formControlName="userName" placeholder="Enter User  name"
+                                        class="form-control form-control-lg" />
+                                </div>
+                                <div class="form-outline form-white mb-4">
+                                    <input type="email" formControlName="userEmail" placeholder="Enter Email Id"
+                                        class="form-control form-control-lg" />
+                                </div>
+                                <div class="form-outline form-white mb-4">
+                                    <input type="password" formControlName="password" placeholder="Enter password"
+                                        class="form-control form-control-lg" />
+                                </div>
+    
+                                <div class="form-outline form-white mb-4">
+                                    <input type="password" formControlName="userContact" placeholder="Enter User contact"
+                                        class="form-control form-control-lg" />
+                                </div>
+                                <div class="form-outline form-white mb-4">
+                                    <input type="password" formControlName="userAccNo" placeholder="Enter User Acc Number"
+                                        class="form-control form-control-lg" />
+                                </div>
+                                <div class="form-outline form-white mb-4">
+                                    <select name="userType" formControlName="userType" placeholder="Enter type"
+                                        class="form-control form-control-lg" >
+                                        <option value="">User</option>
+                                        <option value="Admin">Admin</option>
+                                    </select>
+                                </div>
+    
+    
+                                <div class="mt-5">
+                                    <button class="btn btn-outline-light btn-lg px-4" style="border-radius: 1rem">
+                                        Register
+                                    </button>
+                                    <br><br>
+                                    Have already an account? <a routerLink="/login"><u>Login here</u></a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
