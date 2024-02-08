@@ -10,15 +10,15 @@ import jakarta.persistence.Table;
 public class Loans {
 	@Id
 	@Column(name = "loan_id")
-	private long loanId;
+	private long loan_id;
 	@Column(name = "loan_type")
-	private String loanType;
+	private String loan_type;
 	@Column(name = "loan_amount")
-	private long loanAmount;
+	private long loan_amount;
 	@Column(name = "loan_emi")
-	private long loanEmi;
+	private long loan_emi;
 	@Column(name = "userId")
-	private long userId;
+	private long user_d;
 
 	public Loans() {
 		super();
