@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import com.loan.bean.Loans;
 import com.loan.repository.LoanRepo;
 
-
+@Service
 public class LoanService {
 
 	@Autowired
