@@ -10,19 +10,18 @@ import jakarta.persistence.Table;
 public class Loans {
 	@Id
 	@Column(name = "loan_id")
-	private long loan_id;
+	private long loanId;
 	@Column(name = "loan_type")
-	private String loan_type;
+	private String loanType;
 	@Column(name = "loan_amount")
-	private long loan_amount;
+	private long loanAmount;
 	@Column(name = "loan_emi")
-	private long loan_emi;
+	private long loanEmi;
 	@Column(name = "userId")
-	private long user_d;
+	private long userId;
 
 	public Loans() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Loans(long loanId, String loanType, long loanAmount, long loanEmi, long userId) {
